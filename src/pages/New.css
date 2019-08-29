@@ -1,0 +1,50 @@
+.new-container {
+  height: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-container form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-container form input {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+.new-container form input::placeholder {
+  color: #999;
+}
+
+.new-container form button {
+  margin: 10px;
+  border: 0;
+  border-radius: 4px;
+  height: 48px;
+  font-size: 16px;
+  background: #7159c1;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.new-container .titulo {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #7159c1;
+  font-size: 20px;
+  font-weight: bold;
+}

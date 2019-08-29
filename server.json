@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@gmail.com",
+      "address": {
+        "street": "Av. das Américas, 5500",
+        "suite": "Apto 403",
+        "city": "Rio de Janeiro",
+        "zipcode": "12456-789"
+      },
+      "phone": "(99)99999-9999"
+    },
+    {
+      "id": 2,
+      "name": "Iron Man",
+      "email": "iron_man@gmail.com",
+      "address": {
+        "street": "Av. das Américas,500",
+        "suite": "Apto 503",
+        "city": "Rio de Janeiro",
+        "zipcode": "12456-000"
+      },
+      "phone": "(99)99999-9999"
+    },
+    {
+      "id": 3,
+      "name": "Hulk",
+      "email": "hulk@gmail.com",
+      "address": {
+        "street": "Av. das Américas, 700",
+        "suite": "Apto 703",
+        "city": "Rio de Janeiro",
+        "zipcode": "12456-001"
+      },
+      "phone": "(99)99999-9999"
+    },
+    {
+      "name": "Teste",
+      "email": "teste@teste.com",
+      "street": "Rua teste,123",
+      "suite": "654",
+      "city": "Rio de Janeiro",
+      "zipcode": "20998-000",
+      "phone": "(21)99999-9999",
+      "id": 4
+    },
+    {
+      "name": "Montezi",
+      "email": "montezi@gmail.com",
+      "street": "Rua tenente costa,135",
+      "suite": "Bloco 1 Apto 201",
+      "city": "Rio de Janeiro",
+      "zipcode": "20775-080",
+      "phone": "(21) 988240501",
+      "id": 5
+    }
+  ]
+}
