@@ -6,11 +6,8 @@ import './Main.css';
 
 import api from '../services/api';
 
-// import { Container } from './styles';
-
 export default function Main({ history }) {
   const [users, setUsers] = useState([]);
-
   useEffect(() => {
     async function loadUsers() {
       const response = await api.get('users');
@@ -25,6 +22,17 @@ export default function Main({ history }) {
   function handleAddUser() {
     history.push('/new');
   }
+
+  async function deleteUser(id) {
+    const data = users.filter(i => i.id !== id);
+    await api.delete(`/users/${id}`);
+    setUsers(data);
+  }
+
+  function handleEditUser(id) {
+    history.push(`/new/${id}`);
+  }
+
   return (
     <div className="main-container">
       <MDBTable className="table table-bordered">
@@ -41,10 +49,10 @@ export default function Main({ history }) {
               <td>{user.id}</td>
               <td>{user.name}</td>
               <td>
-                <button type="button" onClick={() => handleAddUser(user.id)}>
+                <button type="button" onClick={() => handleEditUser(user.id)}>
                   <FaPencilAlt color="#FFF" size={14} />
                 </button>
-                <button type="button" onClick={() => handleAddUser(user.id)}>
+                <button type="button" onClick={() => deleteUser(user.id)}>
                   <FaTrash color="#FFF" size={14} />
                 </button>
               </td>

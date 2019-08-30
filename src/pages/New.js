@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './New.css';
 
 import api from '../services/api';
-// import { Container } from './styles';
 
-export default function New({ history }) {
+export default function New({ history, match }) {
+  const userId = match.params.id;
+
+  const [id, setId] = useState([]);
   const [name, setName] = useState([]);
   const [email, setEmail] = useState([]);
   const [street, setStreet] = useState([]);
@@ -14,18 +16,34 @@ export default function New({ history }) {
   const [zipcode, setZipcode] = useState([]);
   const [phone, setPhone] = useState([]);
 
+  useEffect(() => {
+    async function loadUser() {
+      const response = await api.get(`users/${userId}`);
+      setId(response.data.id);
+      setName(response.data.name);
+      setEmail(response.data.email);
+      setStreet(response.data.address.street);
+      setSuite(response.data.address.suite);
+      setCity(response.data.address.city);
+      setZipcode(response.data.address.zipcode);
+      setPhone(response.data.phone);
+    }
+    loadUser();
+  }, [userId]);
+
   async function handleSubmit(e) {
     e.preventDefault();
 
     await api.post('/users', {
+      id,
       name,
       email,
-      // adress: {
-      street,
-      suite,
-      city,
-      zipcode,
-      // },
+      address: {
+        street,
+        suite,
+        city,
+        zipcode,
+      },
       phone,
     });
 
@@ -35,6 +53,11 @@ export default function New({ history }) {
     <div className="new-container">
       <form onSubmit={handleSubmit}>
         <div className="titulo">Cadastro de Usuário:</div>
+        <input
+          placeholder="Informe o Id"
+          value={id}
+          onChange={e => setId(e.target.value)}
+        />
         <input
           placeholder="Informe o seu nome"
           value={name}

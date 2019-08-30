@@ -8,7 +8,8 @@ export default function Routes() {
   return (
     <BrowserRouter>
       <Route path="/" exact component={Main} />
-      <Route path="/new" component={New} />
+      <Route path="/new" exact component={New} />
+      <Route path="/new/:id" component={New} />
     </BrowserRouter>
   );
 }

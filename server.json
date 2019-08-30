@@ -37,24 +37,16 @@
       "phone": "(99)99999-9999"
     },
     {
-      "name": "Teste",
-      "email": "teste@teste.com",
-      "street": "Rua teste,123",
-      "suite": "654",
-      "city": "Rio de Janeiro",
-      "zipcode": "20998-000",
-      "phone": "(21)99999-9999",
-      "id": 4
-    },
-    {
-      "name": "Montezi",
-      "email": "montezi@gmail.com",
-      "street": "Rua tenente costa,135",
-      "suite": "Bloco 1 Apto 201",
-      "city": "Rio de Janeiro",
-      "zipcode": "20775-080",
-      "phone": "(21) 988240501",
-      "id": 5
+      "id": "5",
+      "name": "Teste Montezi",
+      "email": "teste@montezi.com",
+      "address": {
+        "street": "Rua teste, 123",
+        "suite": "ap 201",
+        "city": "Rio de Janeiro",
+        "zipcode": "20775-000"
+      },
+      "phone": "21 99999-9999"
     }
   ]
 }
