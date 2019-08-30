@@ -1,6 +1,6 @@
 # Desafio-React
 
-# Tecnologias Utilizadas :
+## Tecnologias Utilizadas :
 
 * React
 * React Hooks
