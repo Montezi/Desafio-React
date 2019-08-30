@@ -1,4 +1,53 @@
 # Desafio-React
+
+# Tecnologias Utilizadas :
+
+* React
+* React Hooks
+* React Router DOM
+* mdbreact
+* React Icons
+* Axios
+* Prettier
+* JSON server
+* ESLint
+
+
+## Instalação
+**- Se estiver utilizando Yarn**
+```
+  Todos os comandos abaixo devem ser excutados na raiz do Projeto 
+  Para instalar as dependências:
+  yarn install 
+  Para subir o JSON server :  
+  json-server server.json -p 3333 
+  
+  Para startar a aplicação :
+  yarn start 
+  
+  Executa o aplicativo no modo de desenvolvimento.
+  Abra http: // localhost: 3000 para visualizá-lo no navegador. 
+   
+```
+
+**- Se estiver utilizando npm**
+```
+  Todos os comandos abaixo devem ser excutados na raiz do Projeto 
+  Para instalar as dependências:
+  npm install 
+  Para subir o JSON server :  
+  json-server server.json -p 3333 
+  
+  Para startar a aplicação :
+  npm start 
+  
+  Executa o aplicativo no modo de desenvolvimento.
+  Abra http: // localhost: 3000 para visualizá-lo no navegador. 
+
+```
+
+
+
 **- Tarefa 1 - Listagem de usuários**    
 Para essa tarefa crie uma página simples que contenha uma tabela de usuários.   
 Cada linha da tabela deverá ser um usuário, a primeira e segunda colunas serão **ID** e **Nome**, respectivamente.  
